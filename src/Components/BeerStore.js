@@ -6,6 +6,10 @@ export default function BeerStore() {
   const [beerListState, setBeerListState] = useState(data); 
   const [order, setOrder] = useState([{}]);
 
+  const AddToOrder = () => {
+
+  }
+
   const beerList = beerListState.data.map((beer) => 
         <div key={beer.id} className="beerCardList">
             <Beercard 
@@ -14,7 +18,8 @@ export default function BeerStore() {
                 description={beer.description} 
                 date={beer.date} 
                 image={beer.image} 
-                rating={beer.rating} 
+                rating={beer.rating}
+                price={beer.price}  
             />
         </div>
   );
