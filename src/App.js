@@ -1,12 +1,14 @@
+import React from 'react';
 import './App.css';
+import BeerStore from './Components/BeerStore.js';
 
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      Hello 🍻
+      <>
+        <BeerStore />
+      </>
     </div>
   );
 }
-
-export default App;
