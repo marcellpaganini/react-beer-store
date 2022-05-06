@@ -5,7 +5,7 @@ import BeerStore from './Components/BeerStore.js';
 
 export default function App() {
   return (
-    <div className="App">
+    <div className="app">
       <>
         <BeerStore />
       </>
