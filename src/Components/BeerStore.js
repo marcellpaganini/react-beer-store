@@ -1,6 +1,7 @@
 import { React, useState } from 'react';
 import data from '../Data.js';
 import Beercard from './Beercard.js';
+import './BeerStore.css';
 
 export default function BeerStore() {
   const [beerListState, setBeerListState] = useState(data); 
@@ -11,8 +12,7 @@ export default function BeerStore() {
   }
 
   const beerList = beerListState.data.map((beer) => 
-        <div key={beer.id} className="beerCardList">
-            <Beercard 
+            <Beercard key={beer.id}
                 id={beer.id} 
                 name={beer.name} 
                 description={beer.description} 
@@ -21,15 +21,14 @@ export default function BeerStore() {
                 rating={beer.rating}
                 price={beer.price}  
             />
-        </div>
   );
 
   return (
     <div>
         <h2 align="center">Beer Store</h2>
-        <ul>
+        <div className="beerCardList">
             {beerList}
-        </ul>
+        </div>
     </div>
   )
 }
