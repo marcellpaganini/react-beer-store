@@ -4,12 +4,7 @@ import Beercard from './Beercard.js';
 import './BeerStore.css';
 
 export default function BeerStore() {
-  const [beerListState, setBeerListState] = useState(data); 
-  const [order, setOrder] = useState([{}]);
-
-  const AddToOrder = () => {
-
-  }
+  const [beerListState] = useState(data); 
 
   const beerList = beerListState.data.map((beer) => 
             <Beercard key={beer.id}
