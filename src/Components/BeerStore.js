@@ -1,18 +1,29 @@
 import { React, useState } from 'react';
 import data from '../Data.js';
+import Beercard from './Beercard.js';
+import './BeerStore.css';
 
 export default function BeerStore() {
-  const [state, setState] = useState(data); 
-  const beerList = state.data.map((beer) => 
-        <li key={beer.id}>{beer.name}</li>
+  const [beerListState] = useState(data); 
+
+  const beerList = beerListState.data.map((beer) => 
+            <Beercard key={beer.id}
+                id={beer.id} 
+                name={beer.name} 
+                description={beer.description} 
+                date={beer.date} 
+                image={beer.image} 
+                rating={beer.rating}
+                price={beer.price}  
+            />
   );
 
   return (
     <div>
-        <h1>Beer Store</h1>
-        <ul>
+        <h2 align="center">Beer Store</h2>
+        <div className="beerCardList">
             {beerList}
-        </ul>
+        </div>
     </div>
   )
 }

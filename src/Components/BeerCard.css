@@ -1,0 +1,47 @@
+.card {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(228, 225, 225);
+    border-radius: 0.6em;
+    margin: 1em;
+    width: 30em;
+    padding-right: 1em;
+    height: 12em;
+    box-shadow: 4px 3px 8px 1px #969696;
+    font-size:medium;
+}
+
+.cardTitle {
+    font-size: larger;
+    font-weight: bold;
+    margin-top: 0.1em;
+}
+
+.cardImage img {
+    width: 8em;
+    height: 12em;
+}
+
+.cardInfo {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5em;
+}
+
+.button {
+    width: fit-content;
+    border: none;
+    padding: 0.4em 0.7em 0.4em 0.7em;
+    font-size: 0.9em;
+    font-weight: 600;
+    margin-top: 0.3em;
+    background-color: goldenrod;
+    color: white;
+    cursor: pointer;
+    margin-right: 5em;
+    border-radius: 0.3em;
+}
+
+.button:hover {
+    background-color: rgb(184, 140, 29);
+}
