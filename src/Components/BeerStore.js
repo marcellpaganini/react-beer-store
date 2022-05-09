@@ -1,7 +1,9 @@
 import { React, useState } from 'react';
 import data from '../Data.js';
 import Beercard from './Beercard.js';
+import Cart from './Cart.js';
 import './BeerStore.css';
+import './Cart.css';
 
 
 export default function BeerStore() {
@@ -50,7 +52,13 @@ export default function BeerStore() {
 
   return (
     <>
-      <h2 align="center">Beer Store</h2>
+      <div className="head">
+        <h2 align="center">Beer Store</h2>
+        <div className="cart">
+          <Cart title="Checkout"></Cart>
+          <span>0</span>
+        </div>
+      </div>
       <div className="search">
         <i className="fa fa-search icon"></i>
         <input placeholder="Search" type="text" onChange={(event) => {setSearchInput(event.target.value);}} />

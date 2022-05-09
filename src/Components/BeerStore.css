@@ -3,6 +3,29 @@
     flex-wrap: wrap;
 }
 
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+.head h2 {
+    flex: 1;
+    position:absolute;
+}
+
+.head .cart {
+    margin-left: auto;
+    margin-right: 3em;
+    cursor: pointer;
+}
+
+.cart span {
+    color: orange;
+    font-weight: 600;
+}
+
 .beerCardList {
     display: flex;
     flex-direction: row;
@@ -39,12 +62,37 @@
     align-self: center;
 }
 
+.sorting section span:hover {
+    cursor: pointer;
+    background-color: black;    
+}
+
 .sorting section span {
     background-color: rgb(48, 48, 48);
-    border-radius: 0.5em;
+    border-radius: 0.4em;
     color: azure;
     margin: 1em;
     padding: 0.25em;
+}
+
+[role=tooltip],
+.hidetooltip.hidetooltip.hidetooltip + [role=tooltip] {
+  visibility: hidden;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  background: black;
+  color: white;
+}
+
+[aria-describedby]:hover,
+[aria-describedby]:focus {
+  position: relative;
+}
+
+[aria-describedby]:hover + [role=tooltip],
+[aria-describedby]:focus + [role=tooltip] {
+ visibility: visible;
 }
 
 @media only screen and (max-width: 500px) {
