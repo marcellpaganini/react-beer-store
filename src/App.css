@@ -1,5 +1,12 @@
+html {
+    min-width: 100vh;
+}
+
 .app {
     display: flex;
     flex-direction: column;
     font-family: 'Cambay', sans-serif;
+    margin: 0px;
+    border: none;
+    padding: 0px;
 }

@@ -32,6 +32,14 @@ export default function BeerStore() {
         <i className="fa fa-search icon"></i>
         <input placeholder="Search" type="text" onChange={(event) => {setSearchInput(event.target.value);}} />
       </div>
+      <div className="sorting">
+        <section><strong>Sort:</strong></section>
+        <section>
+          <span>By Highest Price</span>
+          <span>By Lowest Price</span>
+          <span>By Release Date</span>
+        </section>
+      </div>
       <div className="display">
         <div className="beerCardList">
             {beerList}
