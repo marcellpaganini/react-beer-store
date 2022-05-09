@@ -38,7 +38,7 @@
 ### Error messages for future reference 
 ❌ Array.prototype.filter() expects a value to be returned at the end of arrow function  
 **Solution** Add an else statement to the end of the function with a return null.   
-❌ Array.prototype.map() is not a function.
+❌ Array.prototype.map() is not a function.  
 **Solution**  Add a check "?" to map: const beerList = beerListState.data?.map((beer) =>   
 ✖ Warning: Each child in a list should have a unique "key" prop.  
 **Solution**  Add a key parameter to the component ```<Todo key={todo} todo={todo} />```  
