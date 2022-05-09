@@ -28,8 +28,45 @@
     margin-top: 0.2em;
 }
 
-@media (max-width: 500px) {
+.sorting {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.7em;
+}
+
+.sorting section {
+    align-self: center;
+}
+
+.sorting section span {
+    background-color: rgb(48, 48, 48);
+    border-radius: 0.5em;
+    color: azure;
+    margin: 1em;
+    padding: 0.25em;
+}
+
+@media only screen and (max-width: 500px) {
+    .sorting section span {
+        font-size: x-large;
+    }
+
+    .sorting section strong {
+        font-size: x-large;
+    }
+
     .search {
-        margin-right: 1.7em;
+        margin-right: 3em;
+        border-radius: 1em;
+        height: 2.5em;
+    }
+
+    .search input {
+        font-size: x-large;
+    }
+
+    .search i {
+        margin-top: 0.5em;
     }
 }

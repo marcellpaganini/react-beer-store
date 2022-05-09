@@ -48,40 +48,33 @@
 
 @media only screen and (max-width: 500px) {
     .card {
-        width: 30em;
-        padding-right: 0.2em;
-        height: 10.6em;
-        box-shadow: 4px 3px 8px 1px #969696;
-        font-size: smaller;
+        width: 45em;
+        height: 15em;
+    }
+
+    .cardImage img {
+        width: 10em;
+        height: 15em;
     }
 
     .cardTitle {
-        font-size: small;
+        font-size: xx-large;
         font-weight: bold;
         margin-top: 0.1em;
     }
-    
-    .cardImage img {
-        width: 7em;
-        height: 10.5em;
-    }
-    
+
     .cardInfo {
         margin: 0.1em 0.1em 0.2em 0.2em;
         line-height: 1.4em;
+        font-size: 1.5em;
     }
     
     .button {
         width: fit-content;
         border: none;
         padding: 0.1em 0.4em 0.1em 0.4em;
-        font-size: 0.9em;
+        font-size: 1.2em;
         font-weight: 400;
         margin-top: 0.1em;
-        background-color: goldenrod;
-        color: white;
-        cursor: pointer;
-        margin-right: 5em;
-        border-radius: 0.3em;
     }
 }
