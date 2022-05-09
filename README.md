@@ -30,10 +30,12 @@
   npm start
   ```   
 
-### Programming Topics practiced to get things done  
-#### 1- Forms (React)    
-- Form Handling     
-- Form Validation    
+### React Topics practiced to get things done  
+- Components (Functionanl, nested components)     
+- Props
+- State hooks  
+- Lists  
+- Event handling    
 
 ### Error messages for future reference 
 ❌ Array.prototype.filter() expects a value to be returned at the end of arrow function  
