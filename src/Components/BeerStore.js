@@ -26,15 +26,17 @@ export default function BeerStore() {
   );
 
   return (
-    <div>
-        <h2 align="center">Beer Store</h2>
-        <div className="search">
+    <>
+      <h2 align="center">Beer Store</h2>
+      <div className="search">
         <i className="fa fa-search icon"></i>
         <input placeholder="Search" type="text" onChange={(event) => {setSearchInput(event.target.value);}} />
-        </div>
+      </div>
+      <div className="display">
         <div className="beerCardList">
             {beerList}
         </div>
-    </div>
+      </div>
+    </>
   )
 }
