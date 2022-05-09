@@ -35,9 +35,11 @@
 - Form Handling     
 - Form Validation    
 
-### Error messages for future reference  
+### Error messages for future reference 
+❌ Array.prototype.filter() expects a value to be returned at the end of arrow function  
+**Solution** Add an else statement to the end of the function with a return null.   
 ❌ Warning: Functions are not valid as a React child. This may happen if you return a Component instead of ```<Component />``` from render. Or maybe you meant to call this function rather than return it.  
-**Solution**   
+**Solution**  Add a check "?" to map: const beerList = beerListState.data?.map((beer) =>   
 ✖ Warning: Each child in a list should have a unique "key" prop.  
 **Solution**  Add a key parameter to the component ```<Todo key={todo} todo={todo} />```  
 ✖ Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>?    
