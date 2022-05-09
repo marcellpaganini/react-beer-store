@@ -1,6 +1,35 @@
+.display {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .beerCardList {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.search {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 3em;
+    border-radius: 1em;
+    height: 1.7em;
+}
+
+.search input {
+    border-radius: 0.5em;
+}
+
+.search i {
+    position: absolute;
+    margin-right: 0.5em;
+    margin-top: 0.2em;
+}
+
+@media (max-width: 500px) {
+    .search {
+        margin-right: 1.7em;
+    }
 }

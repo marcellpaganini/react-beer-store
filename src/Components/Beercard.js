@@ -1,6 +1,7 @@
 import React from 'react';
 import './BeerCard.css';
 
+
 export default function Beercard(props) {
   return (
     <div key={props.id} className="card">
