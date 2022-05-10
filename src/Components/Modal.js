@@ -1,10 +1,13 @@
 import React from 'react'
+import './Modal.css'
 
 export default function Modal(props) {
   return (
     <div className="modalBackground">
         <div className="modalContainer">
-            <button onClick={() => props.closeModal(false)}>&times;</button>
+            <section className="close">
+                <button onClick={() => props.closeModal(false)}>&times;</button>
+            </section>
             <section className="title">
                 <h1>Confirm Order</h1>
             </section>
@@ -12,7 +15,7 @@ export default function Modal(props) {
                 <p>Table with order items.</p>
             </section>
             <section className="footer">
-                <button onClick={() => props.closeModal(false)}>Cancel</button>
+                <button id="cancelButton" onClick={() => props.closeModal(false)}>Cancel</button>
                 <button>Continue</button>
             </section>
         </div>
