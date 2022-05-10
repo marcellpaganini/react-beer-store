@@ -93,7 +93,7 @@ export default function BeerStore() {
             {beerList.length === 0 ? notFound : beerList}
         </div>
       </div>
-      {openModal && <Modal />}
+      {openModal && <Modal closeModal={setOpenModal} />}
     </>
   )
 }

@@ -1,10 +1,10 @@
 import React from 'react'
 
-export default function Modal() {
+export default function Modal(props) {
   return (
     <div className="modalBackground">
         <div className="modalContainer">
-            <button>&times;</button>
+            <button onClick={() => props.closeModal(false)}>&times;</button>
             <section className="title">
                 <h1>Confirm Order</h1>
             </section>
@@ -12,7 +12,7 @@ export default function Modal() {
                 <p>Table with order items.</p>
             </section>
             <section className="footer">
-                <button>Cancel</button>
+                <button onClick={() => props.closeModal(false)}>Cancel</button>
                 <button>Continue</button>
             </section>
         </div>
