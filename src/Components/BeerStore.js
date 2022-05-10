@@ -2,6 +2,7 @@ import { React, useState } from 'react';
 import data from '../Data.js';
 import Beercard from './Beercard.js';
 import Cart from './Cart.js';
+import NotFound from './NotFound.js';
 import './BeerStore.css';
 import './Cart.css';
 
@@ -20,7 +21,7 @@ export default function BeerStore() {
         return [...previousItems, beer];
       })
   }
-  console.log(orderList);
+
   const beerList = beerListState.data?.filter((beer) => {
     if (searchInput === "") {
       return beer;
@@ -39,6 +40,8 @@ export default function BeerStore() {
                 addToCart={handleAddToCart} 
             />
   );
+
+  const notFound = <NotFound />
 
   const handleSort = (sortParm) => {
     switch (sortParm) {
@@ -85,7 +88,7 @@ export default function BeerStore() {
       </div>
       <div className="display">
         <div className="beerCardList">
-            {beerList}
+            {beerList.length === 0 ? notFound : beerList}
         </div>
       </div>
     </>
