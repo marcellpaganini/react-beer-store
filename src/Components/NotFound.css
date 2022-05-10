@@ -1,0 +1,7 @@
+.notFound {
+    display: flex;
+    color: red;
+    font-size: x-large;
+    font-weight: normal;
+    margin-top: 8em;
+}
