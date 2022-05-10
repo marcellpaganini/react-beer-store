@@ -3,6 +3,7 @@ import data from '../Data.js';
 import Beercard from './Beercard.js';
 import Cart from './Cart.js';
 import NotFound from './NotFound.js';
+import Modal from './Modal.js';
 import './BeerStore.css';
 import './Cart.css';
 
@@ -11,6 +12,7 @@ export default function BeerStore() {
   const [beerListState, setBeerListState] = useState(data); 
   const [searchInput, setSearchInput] = useState("");
   const [orderList, setOrderList] = useState([]);
+  const [openModal, setOpenModal] = useState(false);
 
   const handleAddToCart = (id) => {
       const beer = beerListState.data.find(beer => beer.id === id);
@@ -41,7 +43,7 @@ export default function BeerStore() {
             />
   );
 
-  const notFound = <NotFound />
+  const notFound = <NotFound />;
 
   const handleSort = (sortParm) => {
     switch (sortParm) {
@@ -69,7 +71,7 @@ export default function BeerStore() {
     <>
       <div className="head">
         <h2 align="center">Beer Store</h2>
-        <button className="cart" title="Checkout">
+        <button className="cart" title="Checkout" onClick={() => {setOpenModal(true)}}>
           <Cart title="Checkout"></Cart>
           <span>{orderList.length}</span>
         </button>
@@ -91,6 +93,7 @@ export default function BeerStore() {
             {beerList.length === 0 ? notFound : beerList}
         </div>
       </div>
+      {openModal && <Modal />}
     </>
   )
 }

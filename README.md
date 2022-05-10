@@ -35,7 +35,8 @@
 - Props
 - State hooks  
 - Lists  
-- Event handling    
+- Event handling  
+- Conditional rendering with &&  
 
 ### Error messages for future reference 
 ❌ Array.prototype.filter() expects a value to be returned at the end of arrow function  
