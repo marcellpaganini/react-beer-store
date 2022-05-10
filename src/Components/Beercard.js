@@ -14,7 +14,7 @@ export default function Beercard(props) {
             <span><strong>Release Date: </strong>{props.date}</span>      
             <span><strong>Rating: </strong>{props.rating}</span>
             <span><strong>Price: </strong>${props.price}</span> 
-            <button className="button">ADD TO CART</button>   
+            <button className="button" onClick={() => props.addToCart(props.id)}>ADD TO CART</button>   
         </section>
     </div>
   )
