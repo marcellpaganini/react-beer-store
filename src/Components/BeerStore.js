@@ -54,10 +54,10 @@ export default function BeerStore() {
     <>
       <div className="head">
         <h2 align="center">Beer Store</h2>
-        <div className="cart">
+        <button className="cart" title="Checkout">
           <Cart title="Checkout"></Cart>
           <span>0</span>
-        </div>
+        </button>
       </div>
       <div className="search">
         <i className="fa fa-search icon"></i>
