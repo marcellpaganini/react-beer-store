@@ -1,13 +1,26 @@
 import { React, useState } from 'react';
 import data from '../Data.js';
 import Beercard from './Beercard.js';
+import Cart from './Cart.js';
 import './BeerStore.css';
+import './Cart.css';
 
 
 export default function BeerStore() {
   const [beerListState, setBeerListState] = useState(data); 
   const [searchInput, setSearchInput] = useState("");
-  
+  const [orderList, setOrderList] = useState([]);
+
+  const handleAddToCart = (id) => {
+      const beer = beerListState.data.find(beer => beer.id === id);
+
+      if (orderList.includes(beer)) { return }
+
+      setOrderList(previousItems => {
+        return [...previousItems, beer];
+      })
+  }
+  console.log(orderList);
   const beerList = beerListState.data?.filter((beer) => {
     if (searchInput === "") {
       return beer;
@@ -22,7 +35,8 @@ export default function BeerStore() {
                 date={beer.date} 
                 image={beer.image} 
                 rating={beer.rating}
-                price={beer.price}  
+                price={beer.price} 
+                addToCart={handleAddToCart} 
             />
   );
 
@@ -50,7 +64,13 @@ export default function BeerStore() {
 
   return (
     <>
-      <h2 align="center">Beer Store</h2>
+      <div className="head">
+        <h2 align="center">Beer Store</h2>
+        <button className="cart" title="Checkout">
+          <Cart title="Checkout"></Cart>
+          <span>{orderList.length}</span>
+        </button>
+      </div>
       <div className="search">
         <i className="fa fa-search icon"></i>
         <input placeholder="Search" type="text" onChange={(event) => {setSearchInput(event.target.value);}} />
