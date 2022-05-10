@@ -19,8 +19,6 @@ export default function BeerStore() {
       setOrderList(previousItems => {
         return [...previousItems, beer];
       })
-
-      
   }
   console.log(orderList);
   const beerList = beerListState.data?.filter((beer) => {
