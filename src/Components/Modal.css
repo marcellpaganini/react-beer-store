@@ -38,9 +38,10 @@
 }
 
 .modalContainer .body {
-    flex: 50%;
+    padding-left: none;
+    flex: 60%;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     font-size: 1.7rem;
     text-align: center;
@@ -69,6 +70,20 @@
     background-color: crimson;
 }
 
+table {
+    margin-left: 0%;
+}
+
+.orderImage {
+    width: 15%;
+    height: 15%;
+}
+
+input[type=number] {
+    border: solid 1px black;
+    width: 35%;
+}
+
 @media only screen and (max-width: 850px) {
     .modalBackground {
         width: 100%;
@@ -76,7 +91,26 @@
     }
       
     .modalContainer {
-        width: 35em;
-        height:35em;
+        width: 90%;
+        height:fit-content;
+    }
+
+    .modalContainer .body {
+        padding-left: none;
+        flex: 0 1;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .orderImage {
+        width: 20%;
+        height: 20%;
+    }
+
+    .tableDataImg {
+        width: 25%;
     }
 }
