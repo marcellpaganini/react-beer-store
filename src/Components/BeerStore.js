@@ -69,6 +69,7 @@ export default function BeerStore() {
 
   return (
     <>
+      {openModal && <Modal closeModal={setOpenModal} />}
       <div className="head">
         <h2 align="center">Beer Store</h2>
         <button className="cart" title="Checkout" onClick={() => {setOpenModal(true)}}>
@@ -93,7 +94,6 @@ export default function BeerStore() {
             {beerList.length === 0 ? notFound : beerList}
         </div>
       </div>
-      {openModal && <Modal closeModal={setOpenModal} />}
     </>
   )
 }

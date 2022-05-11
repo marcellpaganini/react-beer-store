@@ -58,7 +58,7 @@
     height: 45px;
     margin: 10px;
     border: none;
-    background-color: cornflowerblue;
+    background-color: goldenrod;
     color: white;
     border-radius: 8px;
     font-size: 20px;
@@ -67,4 +67,16 @@
 
 #cancelButton {
     background-color: crimson;
+}
+
+@media only screen and (max-width: 850px) {
+    .modalBackground {
+        width: 100%;
+        height: 100%;
+    }
+      
+    .modalContainer {
+        width: 35em;
+        height:35em;
+    }
 }
