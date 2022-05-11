@@ -40,9 +40,9 @@
 
 ### Error messages for future reference
 ❌React Hook useEffect has a missing dependency: 'props.orders'. Either include it or remove the dependency array.  
-**Solution** 
+**Solution** useEffect accepts multiple dependencies.    
 ❌Warning: You provided a value prop to a form field without an onChange handler. This will render a read-only field. If the field should be mutable use defaultValue. Otherwise, set either onChange or readOnly.   
-**Solution** Add the onChange event handler.
+**Solution** Add the onChange event handler.  
 ❌Uncaught Error: input is a void element tag and must neither have children nor use dangerouslySetInnerHTML.   
 **Solution** The initial input value should be added to the value attribute.  
 ❌ Array.prototype.filter() expects a value to be returned at the end of arrow function  
