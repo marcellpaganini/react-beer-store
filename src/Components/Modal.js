@@ -8,12 +8,14 @@ export default function Modal(props) {
 
   const handleQuantityChange = (e) => {
     const quantity = e.target.value;
-    const targetOrder = listWithQuantity.find((order) => order.id === 
+    const newListQuantity = [...listWithQuantity];
+
+    const targetOrder = newListQuantity.find((order) => order.id === 
                         e.target.attributes[0].value);
 
-        setListWithQuantity(listWithQuantity.map(order => {
+        setListWithQuantity(newListQuantity.map(order => {
         if (order.id === targetOrder.id) {
-            return [{...order, quantity: quantity }];
+            return {...order, quantity: quantity };
         }
         return order;
     }))
