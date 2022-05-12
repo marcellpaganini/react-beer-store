@@ -6,6 +6,7 @@ export default function Modal(props) {
     return { ...order, quantity: 1 };
   }));
   const [total, setTotal] = useState(0);
+  const [isConfirmed, setIsConfirmed] = useState(false);
 
   useEffect(() => {
     getSum()  
@@ -68,27 +69,38 @@ export default function Modal(props) {
           <button onClick={() => props.closeModal(false)}>&times;</button>
         </section>
         <section className="title">
-          <h1>Confirm Order</h1>
+          { !isConfirmed &&
+            <h1>Confirm Order</h1>
+          }
+          { isConfirmed &&
+            <h1>Order Confirmed! 🍻</h1>
+          }
         </section>
         <section className="body">
-          <table>
-            <thead>
-              <tr>
-                <th>Product</th>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Quantity</th>
-              </tr>
-            </thead>
-            <tbody>{orders}</tbody>
-          </table>
+            { !isConfirmed && 
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                    </tr>
+                    </thead>
+                    <tbody>{orders}</tbody>
+                </table>
+            }
         </section>
-        <section className="total"><span>Total: </span>{total}</section>
+        <section className="total"><strong>Total: </strong>${Math.round(total * 100) / 100}</section>
         <section className="footer">
-          <button id="cancelButton" onClick={() => props.closeModal(false)}>
-            Cancel
-          </button>
-          <button>Confirm</button>
+          { !isConfirmed && 
+            <button id="cancelButton" onClick={() => props.closeModal(false)}>
+                Cancel
+            </button>
+          }
+          { !isConfirmed &&
+            <button onClick={() => setIsConfirmed(true)}>Confirm</button>
+          }
         </section>
       </div>
     </div>

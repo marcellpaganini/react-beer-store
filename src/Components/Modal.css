@@ -84,6 +84,18 @@ input[type=number] {
     width: 35%;
 }
 
+.total {
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+}
+
+.confirmation {
+    display: inline-block;
+    text-align: center;
+    margin-top: 10px;
+}
+
 @media only screen and (max-width: 850px) {
     .modalBackground {
         width: 100%;
