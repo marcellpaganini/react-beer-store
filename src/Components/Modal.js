@@ -5,6 +5,23 @@ export default function Modal(props) {
   const [listWithQuantity, setListWithQuantity] = useState(props.orders.map((order) => {
     return { ...order, quantity: 1 };
   }));
+  const [total, setTotal] = useState(0);
+
+  useEffect(() => {
+    getSum()  
+  })
+
+  const getSum = () => {
+    const newListWithQuantity = [...listWithQuantity];
+    const initialvalue = 0;
+    const calculatedTotal = newListWithQuantity.reduce(
+        (calculatedTotal, currentValue) => calculatedTotal + 
+                                         (currentValue.price * currentValue.quantity),
+        initialvalue
+    );
+
+    setTotal(calculatedTotal);
+  }
 
   const handleQuantityChange = (e) => {
     const quantity = e.target.value;
@@ -66,6 +83,7 @@ export default function Modal(props) {
             <tbody>{orders}</tbody>
           </table>
         </section>
+        <section className="total"><span>Total: </span>{total}</section>
         <section className="footer">
           <button id="cancelButton" onClick={() => props.closeModal(false)}>
             Cancel
