@@ -1,4 +1,4 @@
-import { React, useState, useEffect } from 'react';
+import { React, useState } from 'react';
 import data from '../Data.js';
 import Beercard from './Beercard.js';
 import Cart from './Cart.js';
@@ -13,24 +13,6 @@ export default function BeerStore() {
   const [searchInput, setSearchInput] = useState("");
   const [orderList, setOrderList] = useState([]);
   const [openModal, setOpenModal] = useState(false);
-
-  const [listWithQuantity, setListWithQuantity] = useState([]);
-
-    const updateList = () => {
-        for (const beer of orderList) {
-            const beerWithQuantity = {...beer, quantity: 1};
-            var newList = [...listWithQuantity, beerWithQuantity];
-        }
-        setListWithQuantity(newList);
-    }
-
-    useEffect(() => {
-        updateList()
-      }, [])
-    
-    useEffect(() => {
-        
-      }, [])
 
   const handleAddToCart = (id) => {
       const beer = beerListState.data.find(beer => beer.id === id);
@@ -87,7 +69,7 @@ export default function BeerStore() {
 
   return (
     <>
-      {openModal && <Modal orders={orderList} closeModal={setOpenModal} listWithQuantity={listWithQuantity} />}
+      {openModal && <Modal orders={orderList} closeModal={setOpenModal} />}
       <div className="head">
         <h2 align="center">Beer Store</h2>
         <button className="cart" title="Checkout" onClick={() => {setOpenModal(true)}}>

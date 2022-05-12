@@ -1,15 +1,15 @@
-import React, { useState } from 'react'
+import React, { useRef } from 'react'
 import './Modal.css'
 
 export default function Modal(props) {
-    
+    const qtyInputRef = useRef();
 
-      const orders = props.listWithQuantity.map((order) =>
+      const orders = props.orders.map((order) =>
         <tr key={order.id}>
             <td className="tableDataImg"><img className="orderImage" src={order.image} alt="Beer" /></td>
             <td>{order.name.length > 8 ? order.name.substring(0, 8) + "..." : order.name}</td>
             <td>${order.price}</td>
-            <td><input type="number" value={order.quantity} onChange={() => {}}></input></td>
+            <td><input type="number" value="1" ref={qtyInputRef} onChange={() => {}}></input></td>
         </tr>
       );
 

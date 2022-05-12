@@ -9,8 +9,8 @@
 }
   
 .modalContainer {
-    width: 500px;
-    height:500px;
+    width: 55%;
+    height:fit-content;
     border-radius: 12px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -39,11 +39,11 @@
 
 .modalContainer .body {
     padding-left: none;
-    flex: 60%;
+    flex: 0 1;
     display: flex;
     justify-content: start;
     align-items: center;
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     text-align: center;
 }
 
@@ -75,8 +75,8 @@ table {
 }
 
 .orderImage {
-    width: 15%;
-    height: 15%;
+    width: 16%;
+    height: 16%;
 }
 
 input[type=number] {
