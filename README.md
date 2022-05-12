@@ -39,6 +39,8 @@
 - Conditional rendering with &&  
 
 ### Error messages for future reference
+❌Exception has occurred: TypeError: Cannot read properties of undefined (reading 'length')  
+**Solution** Initialize array state properly. Array wasn't defined in React
 ❌React Hook useEffect has a missing dependency: 'props.orders'. Either include it or remove the dependency array.  
 **Solution** useEffect accepts multiple dependencies.    
 ❌Warning: You provided a value prop to a form field without an onChange handler. This will render a read-only field. If the field should be mutable use defaultValue. Otherwise, set either onChange or readOnly.   
