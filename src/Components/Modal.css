@@ -96,6 +96,18 @@ input[type=number] {
     margin-top: 10px;
 }
 
+.remove {
+    border: none;
+    background-color:crimson;
+    color: white;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.remove:hover {
+    background-color: rgb(165, 17, 46);
+}
+
 @media only screen and (max-width: 850px) {
     .modalBackground {
         width: 100%;

@@ -41,27 +41,33 @@ export default function Modal(props) {
     }))
   }
 
-  const orders = listWithQuantity.map((order) => (
-    <tr key={order.id}>
+  const handleItemRemoval = (id) => {
+
+    setListWithQuantity(listWithQuantity.filter(item => item.id !== id));
+  }
+
+  const orders = listWithQuantity.map((orderItem) => (
+    <tr key={orderItem.id}>
       <td className="tableDataImg">
-        <img className="orderImage" src={order.image} alt="Beer" />
+        <img className="orderImage" src={orderItem.image} alt="Beer" />
       </td>
       <td>
-        {order.name.length > 8
-          ? order.name.substring(0, 8) + "..."
-          : order.name}
+        {orderItem.name.length > 8
+          ? orderItem.name.substring(0, 8) + "..."
+          : orderItem.name}
       </td>
-      <td>${order.price}</td>
+      <td>${orderItem.price}</td>
       <td>
         <input
-          data-key={order.id}
+          data-key={orderItem.id}
           type="number"
           min="1"
           required
-          value={order.quantity}
+          value={orderItem.quantity}
           onChange={(e) => handleQuantityChange(e)}
         />
       </td>
+      <td><button className="remove" title="Checkout" onClick={() => handleItemRemoval(orderItem.id)}>&#10006;</button></td>
     </tr>
   ));
 
@@ -88,6 +94,7 @@ export default function Modal(props) {
                         <th>Name</th>
                         <th>Price</th>
                         <th>Quantity</th>
+                        <th></th>
                     </tr>
                     </thead>
                     <tbody>{orders}</tbody>
