@@ -67,7 +67,7 @@ export default function Modal(props) {
           onChange={(e) => handleQuantityChange(e)}
         />
       </td>
-      <td><button className="remove" title="Checkout" onClick={() => handleItemRemoval(orderItem.id)}>&#10006;</button></td>
+      <td><button className="remove" title="Remove Item" onClick={() => handleItemRemoval(orderItem.id)}>&#10006;</button></td>
     </tr>
   ));
 
