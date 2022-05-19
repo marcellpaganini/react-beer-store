@@ -102,6 +102,7 @@ input[type=number] {
     color: white;
     cursor: pointer;
     transition-duration: 0.4s;
+    border-radius: 0.4em;
 }
 
 .remove:hover {
