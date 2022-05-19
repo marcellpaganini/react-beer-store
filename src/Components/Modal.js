@@ -25,6 +25,8 @@ export default function Modal(props) {
   }
 
   const handleQuantityChange = (e) => {
+    if (e.target.value < 1){ e.target.value = 1};
+
     const quantity = e.target.value;
     const newListQuantity = [...listWithQuantity];
 
@@ -55,6 +57,7 @@ export default function Modal(props) {
           data-key={order.id}
           type="number"
           min="1"
+          required
           value={order.quantity}
           onChange={(e) => handleQuantityChange(e)}
         />
