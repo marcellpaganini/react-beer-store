@@ -41,9 +41,11 @@
 ### Error messages for future reference
 ❌Warning: Maximum update depth exceeded. This can happen when a component calls setState inside useEffect...  
 **Solution** Property didn't need to be set as state. In case access current state while changing it is needed:  
-```useEffect(() => {  
+```  
+useEffect(() => {  
   setItems(currentItems => getCart(currentItems));  
-}, []);```  
+}, []);
+```  
 ❌Exception has occurred: TypeError: Cannot read properties of undefined (reading 'length')  
 **Solution** Initialize array state properly. Array wasn't defined in React
 ❌React Hook useEffect has a missing dependency: 'props.orders'. Either include it or remove the dependency array.  
