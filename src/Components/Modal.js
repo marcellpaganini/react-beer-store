@@ -99,7 +99,7 @@ export default function Modal(props) {
             </button>
           }
           { !isConfirmed &&
-            <button onClick={() => setIsConfirmed(true)}>Confirm</button>
+            <button onClick={() => {setIsConfirmed(true); props.setOrders([]);}}>Confirm</button>
           }
         </section>
       </div>
